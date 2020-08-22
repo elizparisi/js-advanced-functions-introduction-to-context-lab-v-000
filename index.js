@@ -45,7 +45,7 @@ function hoursWorkedOnDate(record, dateWorked){
 }
 
 function wagesEarnedonDate(record, dateWorked){
-  let hours = hoursWorkedOnDate(record, dateWorked);
+  hoursWorkedOnDate(record, dateWorked);
   return record.payPerHour * hours;
 }
 
