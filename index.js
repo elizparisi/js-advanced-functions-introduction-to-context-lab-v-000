@@ -49,7 +49,7 @@ function wagesEarnedOnDate(record, dateWorked){
 }
 
 function allWagesFor(record){
-  return record.timeInEvents.map(event => wagesEarnedOnDate(employeeRecord, event.date)).reduce((total, hoursWorked) => total + hoursWorked);
+  return record.timeInEvents.map(event => wagesEarnedOnDate(employeeRecord, event.date)).reduce((total, hours) => total + hours);
 }
 
 function findEmployeeByFirstName(records, firstName){
