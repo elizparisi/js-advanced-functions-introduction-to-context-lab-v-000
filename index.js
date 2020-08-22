@@ -53,7 +53,7 @@ function allWagesFor(record){
   
   let wages = datesWorked.map(dates => {return wagesEarnedOnDate(record, dateWorked)});
   
-  return total =
+  return allWages = wages.reduce()
 }
 
 function findEmployeeByFirstName(records, firstName){
