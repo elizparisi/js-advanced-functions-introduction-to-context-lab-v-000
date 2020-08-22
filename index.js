@@ -49,13 +49,7 @@ function wagesEarnedOnDate(record, dateWorked){
 }
 
 function allWagesFor(record){
-  let datesWorked = record.timeInEvents.map(event => {return timeInEvent.date});
-  
-  let wages = datesWorked.map(dates => {return wagesEarnedOnDate(record, dateWorked)});
-  
-  let allWages = wages.reduce((total, w) => w + total, 0);
-  
-  return allWages;
+  return record.timeInEvents.map(event => wagesEarnedOnDate(employeeRecord, event.date)).reduce((total, hoursWorked) => total + hoursWorked);
 }
 
 function findEmployeeByFirstName(records, firstName){
