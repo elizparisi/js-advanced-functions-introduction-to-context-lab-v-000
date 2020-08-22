@@ -38,8 +38,7 @@ function createTimeOutEvent(record, timeOut){
 }
 
 function hoursWorkedOnDate(record, dateWorked){
-  let clockIn = record.timeInEvents.find(event => 
-  return timeInEvent.date);
+  let clockIn = record.timeInEvents.find(event => event.date === dateWorked);
   let clockOut = record.timeOutEvents.find(event => event.date === dateWorked);
   
   return (clockOut.hour - clockIn.hour) / 100;
@@ -50,7 +49,7 @@ function wagesEarnedOnDate(record, dateWorked){
 }
 
 function allWagesFor(record){
-  let datesWorked = record.timeInEvents.map(event => event.date === dateWorked)
+  let datesWorked = record.timeInEvents.map(event => return timeInEvent.date);
 }
 
 function findEmployeeByFirstName(records, firstName){
